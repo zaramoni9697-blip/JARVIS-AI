@@ -391,12 +391,11 @@ class JarvisViewModel(application: Application) : AndroidViewModel(application) 
   }
 
   // --- Voice Commands ---
-  fun startVoiceListening(languageCode: String = "en-US") {
+  fun startVoiceListening(languageCode: String = "auto") {
     speechManager.startListening(languageCode) { recognizedText ->
-      handleSpokenInput(recognizedText)
+        handleSpokenInput(recognizedText)
     }
   }
-
   fun stopVoiceListening() {
     speechManager.stopListening()
   }
