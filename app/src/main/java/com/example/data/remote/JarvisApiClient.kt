@@ -79,7 +79,7 @@ class JarvisApiClient {
     // 1. If user provided a valid direct Gemini API Key (starts with AIza or length >= 30), query Gemini API directly
     if (cleanKey.isNotBlank() && (cleanKey.startsWith("AIza") || cleanKey.length >= 25)) {
       try {
-        val geminiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$cleanKey"
+        val geminiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=$cleanKey"
 
         val json = JSONObject()
         val contents = JSONArray()
